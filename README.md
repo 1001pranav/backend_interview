@@ -27,7 +27,7 @@ This repository is designed to help backend developers prepare for **Node.js int
 | 3 | Stacks & Queues | DB Scaling | Indexing & Joins (MySQL) |
 | 4 | HashMaps & HashSets | Message Queues | Aggregation Framework (MongoDB) |
 | 5 | Trees & BSTs | API Rate Limiting | Normalization vs. Denormalization (MySQL) |
-| 6 | Tries | Authentication & Authorization | Schema Design (MongoDB) |
+| 6 | Tries (Prefix Tree) | Authentication & Authorization | Schema Design (MongoDB) |
 | 7 | Graphs (BFS, DFS) | Microservices vs Monolith | Query Optimization (MySQL) |
 | 8 | Shortest Path (Dijkstra, Bellman-Ford) | Event-Driven Architecture | Indexing (MongoDB) |
 | 9 | Heaps | CAP Theorem | Stored Procedures & Triggers (MySQL) |
