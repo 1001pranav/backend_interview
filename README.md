@@ -33,7 +33,7 @@ This repository is designed to help backend developers prepare for **Node.js int
 | 9 | Heaps | CAP Theorem | Stored Procedures & Triggers (MySQL) |
 | 10 | Segment Trees | Distributed Caching | Sharding & Replication (MongoDB) |
 | 11 | Union-Find (Disjoint Set) | Unique ID Generation | Partitioning & MVCC (MySQL) |
-| 12 | DP Basics | Distributed Transactions | Transactions (MongoDB) |
+| 12 | Dynamic Programing Basics | Distributed Transactions | Transactions (MongoDB) |
 | 13 | String Matching (KMP, Rabin-Karp) | Circuit Breakers | Replication & Failover (MySQL) |
 | 14 | LRU Cache | Consistency Models | Performance Tuning (MongoDB) |
 | 15 | Probabilistic DS | Reverse Proxy & CDN | Query Caching (MySQL) |
