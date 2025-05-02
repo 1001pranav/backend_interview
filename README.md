@@ -24,7 +24,7 @@ This repository is designed to help backend developers prepare for **Node.js int
 |---|---|---|---|
 | 1 | Arrays | [Load Balancing](#load-balancing) | ACID Transactions (MySQL) |
 | 2 | Linked Lists | [Caching Strategies](#caching) | CRUD & BSON (MongoDB) |
-| 3 | Stacks & Queues | DB Scaling | Indexing & Joins (MySQL) |
+| 3 | Stacks & Queues | [DB Scaling](#database-scaling) | Indexing & Joins (MySQL) |
 | 4 | HashMaps & HashSets | Message Queues | Aggregation Framework (MongoDB) |
 | 5 | Trees & BSTs | API Rate Limiting | Normalization vs. Denormalization (MySQL) |
 | 6 | Tries (Prefix Tree) | Authentication & Authorization | Schema Design (MongoDB) |
@@ -121,6 +121,15 @@ Caching is the process of storing copies of data in a temporary storage (called 
     - Data is written to DB then Updated cache
 - **Tools:** Redis, Memcached
 
+#### Database Scaling
+Process of increasing the capacity of the server according to the load or other parameters
+**Types of Scaling**
+- **Vertical Scaling:** 
+  * Adding more resources to a single server (like CPU, RAM etc)
+- **Horizontal Scaling:** 
+  * Add more server (Node) to distribute the load.
+
+
 #### Microservices vs Monolith
 - **Monolith:** Easier development, harder scaling
 - **Microservices:** Independent services, better scaling, more complexity
@@ -129,9 +138,6 @@ Caching is the process of storing copies of data in a temporary storage (called 
 - **Brokers:** Kafka, RabbitMQ, SQS
 - **Use Case:** Decoupling systems, asynchronous processing
 
-#### Database Scaling
-- **Vertical Scaling:** Adding more resources to a single server
-- **Horizontal Scaling:** Adding more servers (sharding, replication)
 
 ---
 
