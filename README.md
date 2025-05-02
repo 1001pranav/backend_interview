@@ -22,8 +22,8 @@ This repository is designed to help backend developers prepare for **Node.js int
 
 | Day | Data Structures | System Design | Database |
 |---|---|---|---|
-| 1 | Arrays | Load Balancing | ACID Transactions (MySQL) |
-| 2 | Linked Lists | Caching Strategies | CRUD & BSON (MongoDB) |
+| 1 | Arrays | [Load Balancing](#load-balancing) | ACID Transactions (MySQL) |
+| 2 | Linked Lists | [Caching Strategies](#caching) | CRUD & BSON (MongoDB) |
 | 3 | Stacks & Queues | DB Scaling | Indexing & Joins (MySQL) |
 | 4 | HashMaps & HashSets | Message Queues | Aggregation Framework (MongoDB) |
 | 5 | Trees & BSTs | API Rate Limiting | Normalization vs. Denormalization (MySQL) |
@@ -80,11 +80,45 @@ This repository is designed to help backend developers prepare for **Node.js int
 ### System Design
 
 #### Load Balancing
-- **Types:** Round Robin, Least Connections
+Disturbing traffics across the servers for high availability, Scalability.
+- **Algorithm's:** 
+  1. Round Robin: Redirects traffic in cyclic order without considering the server size.
+  2. Weighted Round Robin: Similar to round robin but more the weight more the traffic. 
+  3. Least Connections: Redirects traffic to least active connection server.
+  4. least response time: Redirects traffic which has least response time.
+  5. IP Hash: Depends on the IP Address
+  6. URL Hash: Depends on the URL
+- **Types of Load balancers** 
+  1. Hardware Load Balancers: Application specific designed IC (Integrated Circuit) used.
+  2. Software Load Balancers: Specific software used with Algorithm using standard server or VM (Virtual Machine).
+  3. DNS Load Balancing: In Domain Name System, loads are balanced by passing the same different IP address for same domain.
+  4. Global Server Load Balancers:  
+
 - **Use Case:** Distributing load across servers
 
 #### Caching
-- **Strategies:** LRU, LFU, Write-back, Write-through
+Caching is the process of storing copies of data in a temporary storage (called a cache) so that future requests can be served faster.
+- **Importance**:
+  1. Reduces latency.
+  2. Reduces load on DB or API.
+  3. Improves efficiency.
+- **Layers**:
+  1. Client-side caching: browser caching.
+  2. CDN Caching: Eg Cloudflare, Akamai.
+  3. Application level: Local caching in code.
+  4. DB level Caching: Redis, Memcached.
+  
+- **Strategies:** 
+  1. LRU (Least Recently Used): 
+    - Removes least recently used data.
+    - Good for data which is repeatedly accessed
+  2. LFU (Least Frequently Used):
+    - Removes least frequently used data.
+    - Good for frequently accessed.
+  3. Write-back:
+    - Data is written to cache first then to DB.
+  4. Write-through:
+    - Data is written to DB then Updated cache
 - **Tools:** Redis, Memcached
 
 #### Microservices vs Monolith
