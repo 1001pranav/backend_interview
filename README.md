@@ -25,7 +25,7 @@ This repository is designed to help backend developers prepare for **Node.js int
 | 1 | Arrays | [Load Balancing](#load-balancing) | ACID Transactions (MySQL) |
 | 2 | Linked Lists | [Caching Strategies](#caching) | CRUD & BSON (MongoDB) |
 | 3 | Stacks & Queues | [DB Scaling](#database-scaling) | Indexing & Joins (MySQL) |
-| 4 | HashMaps & HashSets | Message Queues | Aggregation Framework (MongoDB) |
+| 4 | HashMaps & HashSets | [Message Queues](#message-queues) | Aggregation Framework (MongoDB) |
 | 5 | Trees & BSTs | API Rate Limiting | Normalization vs. Denormalization (MySQL) |
 | 6 | Tries (Prefix Tree) | Authentication & Authorization | Schema Design (MongoDB) |
 | 7 | Graphs (BFS, DFS) | Microservices vs Monolith | Query Optimization (MySQL) |
@@ -45,41 +45,51 @@ This repository is designed to help backend developers prepare for **Node.js int
 | 21 | Final Mock Interviews | System Design Wrap-up | Database Wrap-up |
 
 ---
+## How to Use This Repo?
+1. **Follow the Roadmap** - Study one topic from each section per day.
+2. **Practice Coding** - Implement DSA problems using JavaScript/Node.js.
+3. **Build Projects** - Apply system design and database concepts.
+4. **Mock Interviews** - Practice coding & system design discussions.
 
-## Detailed Notes
+---
 
-### Data Structures & Algorithms
+### **Happy Learning & Best of Luck with Your Backend Interview!** 🚀
 
-#### Arrays
+
+# Detailed Notes
+
+## Data Structures & Algorithms
+
+### Arrays
 - **Operations:** Access, Insert, Delete
 - **Time Complexity:** O(1) access, O(n) insert/delete in worst case
 - **Use Cases:** Caching, Lookups
 
-#### Linked Lists
+### Linked Lists
 - **Types:** Singly, Doubly, Circular
 - **Time Complexity:** O(n) search, O(1) insert/delete at head
 - **Use Cases:** Implementing stacks, memory-efficient structures
 
-#### Stacks & Queues
+### Stacks & Queues
 - **Stack Operations:** LIFO (push, pop)
 - **Queue Operations:** FIFO (enqueue, dequeue)
 - **Use Cases:** Function calls, task scheduling
 
-#### Trees & BST
+### Trees & BST
 - **Binary Search Tree:** Ordered nodes for fast lookups (O(log n))
 - **Balanced Trees:** AVL, Red-Black Tree
 - **Use Cases:** Databases, File Systems
 
-#### Graphs (BFS & DFS)
+### Graphs (BFS & DFS)
 - **BFS:** Shortest path (O(V+E))
 - **DFS:** Cycle detection (O(V+E))
 - **Use Cases:** Route optimization, Social Networks
 
 ---
 
-### System Design
+## System Design
 
-#### Load Balancing
+### Load Balancing
 Disturbing traffics across the servers for high availability, Scalability.
 - **Algorithm's:** 
   1. Round Robin: Redirects traffic in cyclic order without considering the server size.
@@ -96,7 +106,7 @@ Disturbing traffics across the servers for high availability, Scalability.
 
 - **Use Case:** Distributing load across servers
 
-#### Caching
+### Caching
 Caching is the process of storing copies of data in a temporary storage (called a cache) so that future requests can be served faster.
 - **Importance**:
   1. Reduces latency.
@@ -121,7 +131,7 @@ Caching is the process of storing copies of data in a temporary storage (called 
     - Data is written to DB then Updated cache
 - **Tools:** Redis, Memcached
 
-#### Database Scaling
+### Database Scaling
 Process of increasing the capacity of the server according to the load or other parameters
 **Types of Scaling**
 - **Vertical Scaling:** 
@@ -130,14 +140,40 @@ Process of increasing the capacity of the server according to the load or other 
   * Add more server (Node) to distribute the load.
 
 
-#### Microservices vs Monolith
+### Microservices vs Monolith
 - **Monolith:** Easier development, harder scaling
 - **Microservices:** Independent services, better scaling, more complexity
 
-#### Message Queues
-- **Brokers:** Kafka, RabbitMQ, SQS
-- **Use Case:** Decoupling systems, asynchronous processing
+### Message Queues
+A Message Queue is a communication system that allows different parts of a system to communicate asynchronously by passing messages via a queue.
+* Producers: Sends the message to the queue
+* Subscribers: Receives the message from the queue
 
+#### When to use Queue?
+  1. **Decoupling**: When services are not tightly interlinked with each other.
+  2. **Asynchronous processing**: When services needs to run independently.
+  3. **Load leveling**: Optimize the load on the server.
+  4. **Resilience**: Holds the data even when service is down and can consume the message when system is back.
+
+#### **Brokers:** 
+  1. Apache Kafka
+  2. RabbitMQ 
+  3. AWS SQS
+
+#### Core concepts
+1. Queue: 
+  * FIFO (First In First Out)
+  * Holds message until consumed
+  Used By: RabbitMQ and AWS SQS
+2. Topic: 
+  * Similar to PUB/SUB. One Producer and Many Subscribers.
+  Used By: Apache Kafka, RabbitMQ.
+3. Exchange: 
+  * Depending on the Rules data is directs to different queues
+  Used By: RabbitMQ
+4. Partition:
+  * Splits messages across the partitions for parallel processing
+  Used By: Apache Kafka.
 
 ---
 
@@ -197,13 +233,3 @@ Process of increasing the capacity of the server according to the load or other 
 - **Use Case:** Real-time updates in event-driven architectures
 
 ---
-
-## How to Use This Repo?
-1. **Follow the Roadmap** - Study one topic from each section per day.
-2. **Practice Coding** - Implement DSA problems using JavaScript/Node.js.
-3. **Build Projects** - Apply system design and database concepts.
-4. **Mock Interviews** - Practice coding & system design discussions.
-
----
-
-### **Happy Learning & Best of Luck with Your Backend Interview!** 🚀
